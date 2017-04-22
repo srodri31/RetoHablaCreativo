@@ -1,38 +1,83 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <p>
   poblacion works!
 </p>
 
-<div>
-    intento de tabla
-    <hr>
-    <tr>
-      <th>Lugar</th>
-      <th>Población 1993</th>
-      <th>Población 2005</th>
-      <th>Población 2006</th>
-      <th>Población 2007</th>
-      <th>Población 2008</th>
-      <th>Población 2009</th>
-      <th>Población 2010</th>
-      <th>Población 2011</th>
-      <th>Población 2012</th>
-      <th>Población 2013</th>
-      <th>Población 2014</th>
-      <th>Población 2015</th>
-    </tr>
-    <tr *ngFor="let lugar of poblacion | orderBy:'ComunaCorregimiento': false">
-      <th>{{lugar.ComunaCorregimiento}}</th>
-      <th>{{lugar.year1993}}</th>
-      <th>{{lugar.year2005}}</th>
-      <th>{{lugar.year2006}}</th>
-      <th>{{lugar.year2007}}</th>
-      <th>{{lugar.year2008}}</th>
-      <th>{{lugar.year2009}}</th>
-      <th>{{lugar.year2010}}</th>
-      <th>{{lugar.year2011}}</th>
-      <th>{{lugar.year2012}}</th>
-      <th>{{lugar.year2013}}</th>
-      <th>{{lugar.year2014}}</th>
-      <th>{{lugar.year2015}}</th>
-    </tr>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+     <div class="table-responsive">
+        intento de tabla
+        <hr>
+        <table class="table table-bordered table-hover">
+          <tr class="info">
+            <th>Lugar
+              <a class="btn" (click)="sortPoblacion('ComunaCorregimiento', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2007
+              <a class="btn" (click)="sortPoblacion('year2007', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2008
+              <a class="btn" (click)="sortPoblacion('year2008', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2009
+              <a class="btn" (click)="sortPoblacion('year2009', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2010
+              <a class="btn" (click)="sortPoblacion('year2010', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2011
+              <a class="btn" (click)="sortPoblacion('year2011', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2012
+              <a class="btn" (click)="sortPoblacion('year2012', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2013
+              <a class="btn" (click)="sortPoblacion('year2013', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2014
+              <a class="btn" (click)="sortPoblacion('year2014', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+            <th>2015
+              <a class="btn" (click)="sortPoblacion('year2015', true)">
+                <i class="fa fa-sort"></i>
+              </a>
+            </th>
+          </tr>
+          <tr *ngFor="let lugar of poblacion">
+            <td>{{lugar.ComunaCorregimiento}}</td>
+            <td>{{lugar.year2007}}</td>
+            <td>{{lugar.year2008}}</td>
+            <td>{{lugar.year2009}}</td>
+            <td>{{lugar.year2010}}</td>
+            <td>{{lugar.year2011}}</td>
+            <td>{{lugar.year2012}}</td>
+            <td>{{lugar.year2013}}</td>
+            <td>{{lugar.year2014}}</td>
+            <td>{{lugar.year2015}}</td>
+          </tr>
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
 </div>

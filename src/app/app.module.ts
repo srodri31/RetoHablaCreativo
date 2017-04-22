@@ -7,6 +7,7 @@ import { PoblacionModule } from './poblacion/poblacion.module';
 import { AppComponent } from './app.component';
 
 import { PoblacionService } from './poblacion/poblacion.service';
+import { ArrayServicesService } from './services/array-services.service';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PoblacionService } from './poblacion/poblacion.service';
     PoblacionModule
   ],
   providers: [
-    PoblacionService
+    PoblacionService,
+    ArrayServicesService
   ],
   bootstrap: [AppComponent]
 })
