@@ -1,0 +1,16 @@
+<p>
+  poblacion works!
+</p>
+
+<div>
+    intento de tabla
+    <hr>
+    <tr>
+      <th>Lugar</th>
+      <th>Población 2015</th>
+    </tr>
+    <tr *ngFor="let lugar of poblacion">
+      <th>{{lugar.ComunaCorregimiento}}</th>
+      <th>{{lugar.year2015}}</th>
+    </tr>
+</div>
