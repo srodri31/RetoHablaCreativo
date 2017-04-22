@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PoblacionComponent } from './poblacion.component';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { PoblacionComponent } from './poblacion.component';
     PoblacionComponent
   ],
   declarations: [
-    PoblacionComponent
+    PoblacionComponent,
+    OrderByPipe
   ]
 })
 export class PoblacionModule { }

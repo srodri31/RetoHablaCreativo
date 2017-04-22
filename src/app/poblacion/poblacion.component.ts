@@ -17,6 +17,7 @@ export class PoblacionComponent implements OnInit {
       .subscribe(data => {
         this.poblacion = data;
       });
+
   }
 
 }

@@ -7,10 +7,32 @@
     <hr>
     <tr>
       <th>Lugar</th>
+      <th>Población 1993</th>
+      <th>Población 2005</th>
+      <th>Población 2006</th>
+      <th>Población 2007</th>
+      <th>Población 2008</th>
+      <th>Población 2009</th>
+      <th>Población 2010</th>
+      <th>Población 2011</th>
+      <th>Población 2012</th>
+      <th>Población 2013</th>
+      <th>Población 2014</th>
       <th>Población 2015</th>
     </tr>
-    <tr *ngFor="let lugar of poblacion">
+    <tr *ngFor="let lugar of poblacion | orderBy:'ComunaCorregimiento': false">
       <th>{{lugar.ComunaCorregimiento}}</th>
+      <th>{{lugar.year1993}}</th>
+      <th>{{lugar.year2005}}</th>
+      <th>{{lugar.year2006}}</th>
+      <th>{{lugar.year2007}}</th>
+      <th>{{lugar.year2008}}</th>
+      <th>{{lugar.year2009}}</th>
+      <th>{{lugar.year2010}}</th>
+      <th>{{lugar.year2011}}</th>
+      <th>{{lugar.year2012}}</th>
+      <th>{{lugar.year2013}}</th>
+      <th>{{lugar.year2014}}</th>
       <th>{{lugar.year2015}}</th>
     </tr>
 </div>
