@@ -13,6 +13,9 @@ export class ArrayServicesService {
         if ( ae == undefined && be != undefined ) return orderType ? 1 : -1;
         if ( ae != undefined && be == undefined ) return orderType ? -1 : 1;
         if ( ae == be ) return 0;
+        if ( typeof ae == 'number' && typeof be == 'number'){
+          return orderType ? (ae > be ? -1 : 1) : (be > ae ? -1 : 1);
+        }
         return orderType ? (ae.toString().toLowerCase() > be.toString().toLowerCase() ? -1 : 1) : (be.toString().toLowerCase() > ae.toString().toLowerCase() ? -1 : 1);
     } );
     return array;
