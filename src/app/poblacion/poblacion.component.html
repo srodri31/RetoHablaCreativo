@@ -1,217 +1,229 @@
-<div class="row">
-  <div class="col-md-10 col-md-offset-1" *ngIf="!isAddingNewRecord" >
-    <button class="btn btn-default"
-     (click)="isAddingNewRecord = !isAddingNewRecord">Agregar nuevo registro</button>
-  </div>
-</div>
+<div class="margin">
 
-
-<div class="row" *ngIf="isAddingNewRecord">
-  <div class="col-md-10 col-md-offset-1">
-    <form class="form-horizontal" #form="ngForm" (ngSubmit)="addNewData(form.value)">
-      <div class="form-group">
-        <label for="txtLugar" class="col-sm-2 control-label">Lugar </label>
-        <div class="col-sm-6">
-          <input class="form-control" type="text" id="txtLugar"
-            required="true" placeholder="Lugar" ngModel name="ComunaCorregimiento">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label">Población de </label>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add1993pop = !add1993pop"> 1993
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2005pop = !add2005pop"> 2005
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2006pop = !add2006pop"> 2006
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2007pop = !add2007pop"> 2007
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2008pop = !add2008pop"> 2008
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2009pop = !add2009pop"> 2009
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2010pop = !add2010pop"> 2010
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2011pop = !add2011pop"> 2011
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2012pop = !add2012pop"> 2012
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2013pop = !add2013pop"> 2013
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2014pop = !add2014pop"> 2014
-        </div>
-        <div class="col-sm-1">
-          <input type="checkbox" (change)="add2015pop = !add2015pop"> 2015
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add1993pop">
-        <label for="txt1993" class="col-sm-2 control-label">Población 1993 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt1993" type="text" placeholder="Población" ngModel name="year1993">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2005pop">
-        <label for="txt2005" class="col-sm-2 control-label">Población 2005 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2005" type="text" placeholder="Población" ngModel name="year2005">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2006pop">
-        <label for="txt2006" class="col-sm-2 control-label">Población 2006 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2006" type="text" placeholder="Población" ngModel name="year2006">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2007pop">
-        <label for="txt2007" class="col-sm-2 control-label">Población 2007 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2007" type="text" placeholder="Población" ngModel name="year2007">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2008pop">
-        <label for="txt2008" class="col-sm-2 control-label">Población 2008 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2008" type="text" placeholder="Población" ngModel name="year2008">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2009pop">
-        <label for="txt2009" class="col-sm-2 control-label">Población 2009 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2009" type="text" placeholder="Población" ngModel name="year2009">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2010pop">
-        <label for="txt2010" class="col-sm-2 control-label">Población 2010 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2010" type="text" placeholder="Población" ngModel name="year2010">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2011pop">
-        <label for="txt2011" class="col-sm-2 control-label">Población 2011 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2011" type="text" placeholder="Población" ngModel name="year2011">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2012pop">
-        <label for="txt2012" class="col-sm-2 control-label">Población 2012 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2012" type="text" placeholder="Población" ngModel name="year2012">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2013pop">
-        <label for="txt2013" class="col-sm-2 control-label">Población 2013 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2013" type="text" placeholder="Población" ngModel name="year2013">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2014pop">
-        <label for="txt2014" class="col-sm-2 control-label">Población 2014 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2014" type="text" placeholder="Población" ngModel name="year2014">
-        </div>
-      </div>
-      <div class="form-group" *ngIf="add2015pop">
-        <label for="txt2015" class="col-sm-2 control-label">Población 2015 </label>
-        <div class="col-sm-6">
-          <input class="form-control" id="txt2015" type="text" placeholder="Población" ngModel name="year2015">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-          <button class="btn btn-primary" type="submit">Agregar</button>
-          <button class="btn btn-default" type="button" 
-            (click)="isAddingNewRecord = !isAddingNewRecord">Cancelar</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <hr>
-     <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <tr class="info">
-            <th>Lugar
-              <a class="btn" (click)="sortPoblacion('ComunaCorregimiento', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2007
-              <a class="btn" (click)="sortPoblacion('year2007', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2008
-              <a class="btn" (click)="sortPoblacion('year2008', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2009
-              <a class="btn" (click)="sortPoblacion('year2009', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2010
-              <a class="btn" (click)="sortPoblacion('year2010', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2011
-              <a class="btn" (click)="sortPoblacion('year2011', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2012
-              <a class="btn" (click)="sortPoblacion('year2012', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2013
-              <a class="btn" (click)="sortPoblacion('year2013', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2014
-              <a class="btn" (click)="sortPoblacion('year2014', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-            <th>2015
-              <a class="btn" (click)="sortPoblacion('year2015', true)">
-                <i class="fa fa-sort"></i>
-              </a>
-            </th>
-          </tr>
-          <tr *ngFor="let lugar of poblacion">
-            <td>{{lugar.ComunaCorregimiento}}</td>
-            <td>{{lugar.year2007}}</td>
-            <td>{{lugar.year2008}}</td>
-            <td>{{lugar.year2009}}</td>
-            <td>{{lugar.year2010}}</td>
-            <td>{{lugar.year2011}}</td>
-            <td>{{lugar.year2012}}</td>
-            <td>{{lugar.year2013}}</td>
-            <td>{{lugar.year2014}}</td>
-            <td>{{lugar.year2015}}</td>
-          </tr>
-        </table>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1" *ngIf="!isAddingNewRecord" >
+      <button class="btn btn-default"
+      (click)="isAddingNewRecord = !isAddingNewRecord">Agregar nuevo registro</button>
     </div>
-    <div class="col-md-1"></div>
   </div>
+
+
+  <div class="row" *ngIf="isAddingNewRecord">
+    <div class="col-md-11 col-md-offset-1">
+      <h2>Agregar nuevo registro</h2>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+      <form class="form-horizontal" #form="ngForm" (ngSubmit)="addNewData(form.value)">
+        <div class="form-group">
+          <label for="txtLugar" class="col-sm-2 control-label">Lugar </label>
+          <div class="col-sm-6">
+            <input class="form-control" type="text" id="txtLugar"
+              required="true" placeholder="Lugar" ngModel name="ComunaCorregimiento">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Población de </label>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add1993pop = !add1993pop"> 1993
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2005pop = !add2005pop"> 2005
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2006pop = !add2006pop"> 2006
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2007pop = !add2007pop"> 2007
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2008pop = !add2008pop"> 2008
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2009pop = !add2009pop"> 2009
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2010pop = !add2010pop"> 2010
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2011pop = !add2011pop"> 2011
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2012pop = !add2012pop"> 2012
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2013pop = !add2013pop"> 2013
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2014pop = !add2014pop"> 2014
+          </div>
+          <div class="col-sm-1">
+            <input type="checkbox" (change)="add2015pop = !add2015pop"> 2015
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add1993pop">
+          <label for="txt1993" class="col-sm-2 control-label">Población 1993 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt1993" type="text" placeholder="Población" ngModel name="year1993">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2005pop">
+          <label for="txt2005" class="col-sm-2 control-label">Población 2005 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2005" type="text" placeholder="Población" ngModel name="year2005">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2006pop">
+          <label for="txt2006" class="col-sm-2 control-label">Población 2006 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2006" type="text" placeholder="Población" ngModel name="year2006">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2007pop">
+          <label for="txt2007" class="col-sm-2 control-label">Población 2007 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2007" type="text" placeholder="Población" ngModel name="year2007">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2008pop">
+          <label for="txt2008" class="col-sm-2 control-label">Población 2008 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2008" type="text" placeholder="Población" ngModel name="year2008">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2009pop">
+          <label for="txt2009" class="col-sm-2 control-label">Población 2009 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2009" type="text" placeholder="Población" ngModel name="year2009">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2010pop">
+          <label for="txt2010" class="col-sm-2 control-label">Población 2010 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2010" type="text" placeholder="Población" ngModel name="year2010">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2011pop">
+          <label for="txt2011" class="col-sm-2 control-label">Población 2011 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2011" type="text" placeholder="Población" ngModel name="year2011">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2012pop">
+          <label for="txt2012" class="col-sm-2 control-label">Población 2012 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2012" type="text" placeholder="Población" ngModel name="year2012">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2013pop">
+          <label for="txt2013" class="col-sm-2 control-label">Población 2013 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2013" type="text" placeholder="Población" ngModel name="year2013">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2014pop">
+          <label for="txt2014" class="col-sm-2 control-label">Población 2014 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2014" type="text" placeholder="Población" ngModel name="year2014">
+          </div>
+        </div>
+        <div class="form-group" *ngIf="add2015pop">
+          <label for="txt2015" class="col-sm-2 control-label">Población 2015 </label>
+          <div class="col-sm-6">
+            <input class="form-control" id="txt2015" type="text" placeholder="Población" ngModel name="year2015">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button class="btn btn-green" type="submit">Agregar</button>
+            <button class="btn btn-default" type="button" 
+              (click)="resetForm()">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <hr>
+      <div class="table-responsive-vertical shadow-z-1">
+          <table class="table table-hover table-mc-light-blue">
+            <thead>
+            <tr>
+              <th>Lugar
+                <a class="btn" (click)="sortPoblacion('ComunaCorregimiento', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2007
+                <a class="btn" (click)="sortPoblacion('year2007', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2008
+                <a class="btn" (click)="sortPoblacion('year2008', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2009
+                <a class="btn" (click)="sortPoblacion('year2009', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2010
+                <a class="btn" (click)="sortPoblacion('year2010', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2011
+                <a class="btn" (click)="sortPoblacion('year2011', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2012
+                <a class="btn" (click)="sortPoblacion('year2012', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2013
+                <a class="btn" (click)="sortPoblacion('year2013', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2014
+                <a class="btn" (click)="sortPoblacion('year2014', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+              <th>2015
+                <a class="btn" (click)="sortPoblacion('year2015', true)">
+                  <i class="fa fa-sort"></i>
+                </a>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let lugar of poblacion">
+              <td data-title="Lugar">{{lugar.ComunaCorregimiento}}</td>
+              <td data-title="2007">{{lugar.year2007}}</td>
+              <td data-title="2008">{{lugar.year2008}}</td>
+              <td data-title="2009">{{lugar.year2009}}</td>
+              <td data-title="2010">{{lugar.year2010}}</td>
+              <td data-title="2011">{{lugar.year2011}}</td>
+              <td data-title="2012">{{lugar.year2012}}</td>
+              <td data-title="2013">{{lugar.year2013}}</td>
+              <td data-title="2014">{{lugar.year2014}}</td>
+              <td data-title="2015">{{lugar.year2015}}</td>
+            </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+
 </div>
+

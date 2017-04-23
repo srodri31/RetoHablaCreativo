@@ -47,7 +47,10 @@ export class PoblacionComponent implements OnInit {
 
   addNewData(data){
     this.poblacion.push(data);
-    
+    this.resetForm();
+  }  
+
+  resetForm(){
     this.isAddingNewRecord = !this.isAddingNewRecord;
     this.add1993pop = false;
     this.add2005pop = false;
@@ -61,7 +64,6 @@ export class PoblacionComponent implements OnInit {
     this.add2013pop = false;
     this.add2014pop = false;
     this.add2015pop = false;
-
-  }  
+  }
 
 }
