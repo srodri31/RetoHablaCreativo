@@ -1,6 +1,17 @@
 <div class="margin" *ngIf="!seeingChart">
 
+<div class="container-fluid bg-2 text-center" *ngIf="!isAddingNewRecord" >
+  <h2>Culturizate</h2>
+  <p>A continuación se presenta información acerca del aumento de la población en los diferentes
+    sectores de la ciudad de Medellín.
+  </p>
+  <p>De igual forma el desarrolo de esta página web es demostrar los conocimientos en el desarrollo front-end,
+    iniciando así el proceso de selección como ingeniero de sistemas en <i>Habla Creativo</i>
+  </p>
+</div>
+
   <div class="row">
+    <hr>
     <div class="col-md-10 col-md-offset-1" *ngIf="!isAddingNewRecord" >
       <button class="btn btn-default"
       (click)="isAddingNewRecord = !isAddingNewRecord">Agregar nuevo registro</button>
@@ -9,9 +20,9 @@
 
 
   <div class="row" *ngIf="isAddingNewRecord">
-    <div class="col-md-11 col-md-offset-1">
-      <h2>Agregar nuevo registro</h2>
-    </div>
+      <div class="col-md-10 col-md-offset-2">
+        <h2>Agregar nuevo registro</h2>
+      </div>
     <div class="col-md-10 col-md-offset-1">
       <form class="form-horizontal" #form="ngForm" (ngSubmit)="addNewData(form.value)">
         <div class="form-group">
