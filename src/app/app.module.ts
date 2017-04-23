@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PoblacionModule } from './poblacion/poblacion.module';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +19,8 @@ import { ArrayServicesService } from './services/array-services.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    PoblacionModule
+    PoblacionModule,
+    ChartsModule
   ],
   providers: [
     PoblacionService,

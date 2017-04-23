@@ -12,6 +12,10 @@ export class PoblacionComponent implements OnInit {
   poblacion = [];
   sortDesc: boolean = false;
   isAddingNewRecord: boolean = false;
+
+  lugarSelected: any;
+
+  seeingChart: boolean = false;
   
   add1993pop: boolean = false;
   add2005pop: boolean = false;
@@ -66,4 +70,10 @@ export class PoblacionComponent implements OnInit {
     this.add2015pop = false;
   }
 
+  seeChart(lugar){
+    this.lugarSelected = lugar;
+    this.seeingChart = true;
+    console.log(lugar.ComunaCorregimiento);
+    console.log(this.lugarSelected.ComunaCorregimiento);
+  }
 }

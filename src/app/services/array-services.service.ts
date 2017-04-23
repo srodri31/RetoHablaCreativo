@@ -16,6 +16,14 @@ export class ArrayServicesService {
         if ( typeof ae == 'number' && typeof be == 'number'){
           return orderType ? (ae > be ? -1 : 1) : (be > ae ? -1 : 1);
         }
+        if ( typeof ae == 'string' && typeof be == 'number'){
+          var number = Number(ae);
+          return orderType ? (number > be ? -1 : 1) : (be > number ? -1 : 1);
+        }
+        if ( typeof ae == 'number' && typeof be == 'string'){
+          var number = Number(be);
+          return orderType ? (ae > number ? -1 : 1) : (number > ae ? -1 : 1);
+        }
         return orderType ? (ae.toString().toLowerCase() > be.toString().toLowerCase() ? -1 : 1) : (be.toString().toLowerCase() > ae.toString().toLowerCase() ? -1 : 1);
     } );
     return array;
