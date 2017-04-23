@@ -1,16 +1,36 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<p>
-  poblacion works!
-</p>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <form class="form-horizontal" #form="ngForm" (ngSubmit)="addNewData(form.value)">
+      <div class="form-group">
+        <label for="txtLugar" class="col-sm-2 control-label">Lugar </label>
+        <div class="col-sm-10">
+          <input class="form-control" type="text" id="txtLugar" placeholder="Lugar" ngModel name="ComunaCorregimiento">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="txt2015" class="col-sm-2 control-label">Población 2015 </label>
+        <div class="col-sm-10">
+          <input class="form-control" id="txt2015" type="text" placeholder="Población" ngModel name="year2015">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+          <button class="btn btn-default" type="submit">Agregar</button>
+          <button class="btn btn-default" >Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10">
+    <hr>
      <div class="table-responsive">
-        intento de tabla
-        <hr>
         <table class="table table-bordered table-hover">
           <tr class="info">
             <th>Lugar

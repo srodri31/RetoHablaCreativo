@@ -31,6 +31,8 @@ export class PoblacionComponent implements OnInit {
 
   }
 
-  
+  addNewData(data){
+    this.poblacion.push(data);
+  }  
 
 }
