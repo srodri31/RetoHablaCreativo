@@ -1,4 +1,4 @@
-import { Component , Input, OnInit} from '@angular/core';
+import { Component , Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'grafica',
@@ -8,10 +8,11 @@ import { Component , Input, OnInit} from '@angular/core';
 export class GraficaComponent implements OnInit {
 
   @Input() lugar;
+  @Output() onGoBack: EventEmitter<any> = new EventEmitter();
 
  // lineChart
   public lineChartData:Array<any>;
-  public lineChartLabels:Array<any> = ['1993', '2005', '2006', '2007', '2008', '2009', '2010',
+  public lineChartLabels:Array<any> = ['2005', '2006', '2007', '2008', '2009', '2010',
     '2011', '2012', '2013', '2014', '2015'];
   public lineChartOptions:any = {
     responsive: true
@@ -60,7 +61,6 @@ export class GraficaComponent implements OnInit {
 
   dataToChart(lugar){
     var data = [];
-    data.push(Number(lugar.year1993));
     data.push(Number(lugar.year2005));
     data.push(Number(lugar.year2006));
     data.push(Number(lugar.year2007));
@@ -78,5 +78,9 @@ export class GraficaComponent implements OnInit {
     ];
 
     return lineChartData;
+  }
+
+  regresar(){
+    this.onGoBack.emit();
   }
 }

@@ -229,7 +229,10 @@
   </div>
 </div>
 
-<grafica [lugar]="lugarSelected" *ngIf="seeingChart"></grafica>
+<div class="margin col-sm-10 col-sm-offset-1">
+  <grafica [lugar]="lugarSelected" *ngIf="seeingChart"
+  (onGoBack)="seeingChart = false"></grafica>
+</div>
 
 
 
